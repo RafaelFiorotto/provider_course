@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider_course/utils/app_routes.dart';
+import 'package:provider_course/views/products/counter_page.dart';
+import 'package:provider_course/views/products/product_detail_page.dart';
+//import 'package:provider_course/views/products/product_detail_page.dart';
 import 'package:provider_course/views/products/products_overview_page.dart';
 
 void main() {
@@ -16,6 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      routes: {AppRoutes.productDetail: (context) => const ProductDetailPage()},
       home: const MyHomePage(),
     );
   }
