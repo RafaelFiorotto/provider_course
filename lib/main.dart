@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => ProductList(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         routes: {
           AppRoutes.productDetail: (context) => const ProductDetailPage()
         },
-        home: ProductsOverviewPage(),
+        home: const ProductsOverviewPage(),
       ),
     );
   }
