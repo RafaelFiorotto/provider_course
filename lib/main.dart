@@ -5,6 +5,7 @@ import 'package:provider_course/models/order_list.dart';
 import 'package:provider_course/models/product_list.dart';
 import 'package:provider_course/utils/app_routes.dart';
 import 'package:provider_course/views/cart/cart_page.dart';
+import 'package:provider_course/views/orders/orders_page.dart';
 import 'package:provider_course/views/products/product_detail_page.dart';
 import 'package:provider_course/views/products/products_overview_page.dart';
 
@@ -31,10 +32,12 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         routes: {
+          AppRoutes.home: (context) => const ProductsOverviewPage(),
           AppRoutes.productDetail: (context) => const ProductDetailPage(),
-          AppRoutes.cart: (context) => const CartPage()
+          AppRoutes.cart: (context) => const CartPage(),
+          AppRoutes.orders: (context) => const OrdersPage(),
         },
-        home: const ProductsOverviewPage(),
+        //home: const ProductsOverviewPage(),
       ),
     );
   }
