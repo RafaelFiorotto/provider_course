@@ -3,9 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:provider_course/models/cart.dart';
 import 'package:provider_course/models/product_list.dart';
 import 'package:provider_course/utils/app_routes.dart';
-import 'package:provider_course/views/products/counter_page.dart';
+import 'package:provider_course/views/cart/cart_page.dart';
 import 'package:provider_course/views/products/product_detail_page.dart';
-//import 'package:provider_course/views/products/product_detail_page.dart';
 import 'package:provider_course/views/products/products_overview_page.dart';
 
 void main() {
@@ -34,7 +33,8 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         routes: {
-          AppRoutes.productDetail: (context) => const ProductDetailPage()
+          AppRoutes.productDetail: (context) => const ProductDetailPage(),
+          AppRoutes.cart: (context) => const CartPage()
         },
         home: const ProductsOverviewPage(),
       ),
