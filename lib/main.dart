@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_course/models/cart.dart';
+import 'package:provider_course/models/order_list.dart';
 import 'package:provider_course/models/product_list.dart';
 import 'package:provider_course/utils/app_routes.dart';
 import 'package:provider_course/views/cart/cart_page.dart';
@@ -19,12 +20,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (_) => ProductList(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => Cart(),
-        )
+        ChangeNotifierProvider(create: (_) => ProductList()),
+        ChangeNotifierProvider(create: (_) => Cart()),
+        ChangeNotifierProvider(create: (_) => OrderList()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
