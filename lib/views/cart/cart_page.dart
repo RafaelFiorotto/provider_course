@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_course/components/cart_item_widget.dart';
 import 'package:provider_course/models/cart.dart';
+import 'package:provider_course/models/order.dart';
+import 'package:provider_course/models/order_list.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({Key? key}) : super(key: key);
@@ -39,7 +41,10 @@ class CartPage extends StatelessWidget {
                   ),
                   const Spacer(),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Provider.of<OrderList>(context, listen: false);
+                      cart.clearCart();
+                    },
                     child: const Text('COMPRAR'),
                   ),
                 ],
